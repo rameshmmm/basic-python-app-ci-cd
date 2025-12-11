@@ -27,6 +27,7 @@ jobs:
           pytest
   
   docker_build_publish:
+    needs: lint_test
     runs-on: ubuntu-latest
     steps:
       - name: Login to Docker Hub
